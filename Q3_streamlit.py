@@ -42,7 +42,7 @@ st.markdown('3. Kan Chern Hann (1181101441)')
 #PART I
 st.header('Part (i) - Exploratory Data Analysis')
 
-st.markdown('For Question 3, the timeframe of the data that is used is from 01-08-2020 untik 31-07-2021.')
+st.markdown('For Question 3, the timeframe of the data that is used is from 01-08-2020 until 31-07-2021.')
 st.markdown('The missing values were identified during the data cleaning proccess. Due to the abundance of null data values, the rows with NA values are removed. When dealing with sensitive data like COVID-19, filling in the null values with the mean may not be appropriate.')
 st.markdown('The outliers can be identified using a boxplot. The comparative boxplot figures below are on the attribute: *cases_new*. The data set used is from the fourth quarter part of the year. We decided to limit the data size as we found that by using a year worth of data leads to an insurmountable amount of outliers.')
 
