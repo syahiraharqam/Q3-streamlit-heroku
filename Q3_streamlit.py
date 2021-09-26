@@ -46,7 +46,6 @@ st.markdown('The missing values were identified during the data cleaning procces
 st.markdown('The outliers can be identified using a boxplot. The comparative boxplot figures below are on the attribute: *cases_new*. The data set used is from the fourth quarter part of the year. We decided to limit the data size as we found that by using a year worth of data leads to an insurmountable amount of outliers.')
 
 from PIL import Image 
-Image.open('boxplot_casesQ4.jpg').convert('RGB').save('boxplot_casesQ4.jpeg')
 boxplot = Image.open('boxplot_casesQ4.jpeg')
 st.image(boxplot, width=1000)
 
@@ -70,7 +69,6 @@ corr = corr_df.corr()
 
 st.markdown('The data attribute used to find the correlation is: *cases_new*.')
 
-Image.open('heatmap_ii.jpg').convert('RGB').save('heatmap_ii.jpeg')
 heatmap_ii = Image.open('heatmap_ii.jpeg')
 st.image(heatmap_ii, width=1000, caption='Correlation Heatmap of New Cases Between States')
 
@@ -119,7 +117,6 @@ if(state_iii=='Pahang'):
     p_corr = pahang_df.corr(method ='pearson')
 
     st.markdown("**Pearson's Correlation Coefficient**")
-    Image.open('p_iii.jpg').convert('RGB').save('p_iii.jpeg')
     p_iii = Image.open('p_iii.jpeg')
     st.image(p_iii, width=1000, caption='Correlation Heatmap Between Features')
 
@@ -146,7 +143,6 @@ if(state_iii=='Pahang'):
     p_feat_imp = pd.Series(p_imp, pahang_X.columns)
     p_feat_imp = p_feat_imp.sort_values()
 
-    Image.open('p_feat_imp.jpg').convert('RGB').save('p_feat_imp.jpeg')
     p_f = Image.open('p_feat_imp.jpeg')
     st.image(p_f, width=700, caption='Mutual Information Between New Cases and Features')
 
@@ -171,7 +167,6 @@ elif(state_iii=='Kedah'):
     k_corr = kedah_df.corr(method ='pearson')
 
     st.markdown("**Pearson's Correlation Coefficient**")
-    Image.open('k_iii.jpg').convert('RGB').save('k_iii.jpeg')
     k_iii = Image.open('k_iii.jpeg')
     st.image(k_iii, width=1000, caption='Correlation Heatmap Between Features')
     
@@ -198,7 +193,6 @@ elif(state_iii=='Kedah'):
     k_feat_imp = pd.Series(k_imp, kedah_X.columns)
     k_feat_imp = k_feat_imp.sort_values()
 
-    Image.open('k_feat_imp.jpg').convert('RGB').save('k_feat_imp.jpeg')
     k_f = Image.open('k_feat_imp.jpeg')
     st.image(k_f, width=700, caption='Mutual Information Between New Cases and Features')
 
@@ -223,7 +217,7 @@ elif(state_iii=='Johor'):
     j_corr = johor_df.corr(method ='pearson')
 
     st.markdown("**Pearson's Correlation Coefficient**")
-    Image.open('j_iii.jpg').convert('RGB').save('j_iii.jpeg')
+
     j_iii = Image.open('j_iii.jpeg')
     st.image(j_iii, width=1000, caption='Correlation Heatmap Between Features')
 
@@ -250,7 +244,6 @@ elif(state_iii=='Johor'):
     j_feat_imp = pd.Series(j_imp, johor_X.columns)
     j_feat_imp = j_feat_imp.sort_values()
 
-    Image.open('j_feat_imp.jpg').convert('RGB').save('j_feat_imp.jpeg')
     j_f = Image.open('j_feat_imp.jpeg')
     st.image(j_f, width=700, caption='Mutual Information Between New Cases and Features')
 
@@ -276,7 +269,6 @@ elif(state_iii=='Selangor'):
     s_corr = selangor_df.corr(method ='pearson')
 
     st.markdown("**Pearson's Correlation Coefficient**")
-    Image.open('s_iii.jpg').convert('RGB').save('s_iii.jpeg')
     s_iii = Image.open('s_iii.jpeg')
     st.image(s_iii, width=1000, caption='Correlation Heatmap Between Features')
 
@@ -303,7 +295,6 @@ elif(state_iii=='Selangor'):
     s_feat_imp = pd.Series(s_imp, selangor_X.columns)
     s_feat_imp = s_feat_imp.sort_values()
 
-    Image.open('s_feat_imp.jpg').convert('RGB').save('s_feat_imp.jpeg')
     s_f = Image.open('s_feat_imp.jpeg')
     st.image(s_f, width=700, caption='Mutual Information Between New Cases and Features')
 
@@ -337,7 +328,6 @@ if(state_iv=='Pahang'):
     p_r_df = pd.DataFrame(p_r, index=['Mean Absolute Error', 'Mean Squared Error', 'Root Mean Squared Error'])
     p_r_df
 
-    Image.open('p_eva_r.jpg').convert('RGB').save('p_eva_r.jpeg')
     p_eva_r = Image.open('p_eva_r.jpeg')
     st.image(p_eva_r, width=700)
 
@@ -349,7 +339,6 @@ if(state_iv=='Pahang'):
     p_c_df = pd.DataFrame(p_c, index=['Accuracy', 'Precision', 'Recall'])
     p_c_df
 
-    Image.open('p_eva_c.jpg').convert('RGB').save('p_eva_c.jpeg')
     p_eva_c = Image.open('p_eva_c.jpeg')
     st.image(p_eva_c, width=700)
 
@@ -361,7 +350,6 @@ elif(state_iv=='Kedah'):
     k_r_df = pd.DataFrame(k_r, index=['Mean Absolute Error', 'Mean Squared Error', 'Root Mean Squared Error'])
     k_r_df
 
-    Image.open('k_eva_r.jpg').convert('RGB').save('k_eva_r.jpeg')
     k_eva_r = Image.open('k_eva_r.jpeg')
     st.image(k_eva_r, width=700)
 
@@ -373,7 +361,6 @@ elif(state_iv=='Kedah'):
     k_c_df = pd.DataFrame(k_c, index=['Accuracy', 'Precision', 'Recall'])
     k_c_df
 
-    Image.open('k_eva_c.jpg').convert('RGB').save('k_eva_c.jpeg')
     k_eva_c = Image.open('k_eva_c.jpeg')
     st.image(k_eva_c, width=700)
 
@@ -385,7 +372,6 @@ elif(state_iv=='Johor'):
     j_r_df = pd.DataFrame(j_r, index=['Mean Absolute Error', 'Mean Squared Error', 'Root Mean Squared Error'])
     j_r_df
 
-    Image.open('j_eva_r.jpg').convert('RGB').save('j_eva_r.jpeg')
     j_eva_r = Image.open('j_eva_r.jpeg')
     st.image(j_eva_r, width=700)
 
@@ -397,7 +383,6 @@ elif(state_iv=='Johor'):
     j_c_df = pd.DataFrame(j_c, index=['Accuracy', 'Precision', 'Recall'])
     j_c_df
 
-    Image.open('j_eva_c.jpg').convert('RGB').save('j_eva_c.jpeg')
     j_eva_c = Image.open('j_eva_c.jpeg')
     st.image(j_eva_c, width=700)
 
@@ -409,7 +394,6 @@ elif(state_iv=='Selangor'):
     s_r_df = pd.DataFrame(s_r, index=['Mean Absolute Error', 'Mean Squared Error', 'Root Mean Squared Error'])
     s_r_df
 
-    Image.open('s_eva_r.jpg').convert('RGB').save('s_eva_r.jpeg')
     s_eva_r = Image.open('s_eva_r.jpeg')
     st.image(s_eva_r, width=700)
 
@@ -421,7 +405,6 @@ elif(state_iv=='Selangor'):
     s_c_df = pd.DataFrame(s_c, index=['Accuracy', 'Precision', 'Recall'])
     s_c_df
 
-    Image.open('s_eva_c.jpg').convert('RGB').save('s_eva_c.jpeg')
     s_eva_c = Image.open('s_eva_c.jpeg')
     st.image(s_eva_c, width=700)
 
